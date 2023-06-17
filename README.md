@@ -1,9 +1,15 @@
 # ⚛️ React Master - Mini blog: Gérer l'état d'un composant (Correction)
 
-Dans cet énoncé tu trouvra:
+> Dans cet énoncé tu trouvra:
+>
+> 1 ℹ️ information<br>
+> 1 💡 indice
 
-1 ℹ️ information<br>
-1 💡 indice
+## Sommaire
+
+1.   [Notions](#notions-de-lexercice)
+2.   [Consignes](#consignes)
+3.   [Correction](#correction)
 
 ## Notions de l'exercice
 
