@@ -32,7 +32,7 @@ cd react-master-mini-blog
 Accède à la branche de l'exercice en exécutant la commande:
 
 ```bash
-git switch ex01
+git switch ex01/exercise
 ```
 
 Puis installes les dépendances avec la commande:
