@@ -1,9 +1,15 @@
 # ⚛️ React Master - Mini blog: Gérer l'état d'un composant (Exercice)
 
-Dans cet énoncé tu trouvra:
+> Dans cet énoncé tu trouvra:
+>
+> 1 ℹ️ information<br>
+> 1 💡 indice
 
-1 ℹ️ information<br>
-1 💡 indice
+## Sommaire
+
+1.   [Notions](#notions-de-lexercice)
+2.   [Consignes](#consignes)
+3.   [Correction](#correction)
 
 ## Notions de l'exercice
 
@@ -75,3 +81,9 @@ Lorsque l'utilisateur clique à nouveau sur le bouton, l'article doit disparaît
  > Voici le lien vers la page de la documentation de React qui parle de `useState`: <https://react.dev/reference/react/useState>
 
 </details>
+
+## Correction
+
+Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex01/correction>
+
+Ou suivre la correction en vidéo ici: _Bientôt disponible_
