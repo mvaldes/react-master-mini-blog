@@ -1,4 +1,4 @@
-# ⚛️ React Master - Mini blog: Gérer l'état d'un composant
+# ⚛️ React Master - Mini blog: Gérer l'état d'un composant (Exercice)
 
 Dans cet énoncé tu trouvra:
 
