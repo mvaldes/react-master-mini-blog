@@ -19,9 +19,7 @@
 
 ## Consignes
 
-Pour cet exercice, tu vas devoir cloner le dépôt dont le lien s'affiche ci-dessous:
-
-> ⚠️ Lien du dépôt à ajouter
+Pour réaliser cet exercice, tu vas devoir suivre les instructions suivantes:
 
 Tu peux taper la commande suivante dans ton terminal:
 
