@@ -14,6 +14,7 @@ const App = () => {
 		<h1>Mini Blog</h1>
 		<Button
 			variant={ isArticleDisplayed ? 'danger' : 'primary' }
+			type="button"
 			onClick={ handleToggleArticle }
 		>
 			{ isArticleDisplayed ? 'Hide' : 'Show' } article

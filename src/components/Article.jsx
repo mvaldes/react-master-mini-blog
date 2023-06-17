@@ -1,5 +1,11 @@
-const Article = () => {
-	// Write the code of your component here
+const Article = ({ title, children }) => {
+
+	return (
+		<div>
+			<h2>{ title }</h2>
+			{ children }
+		</div>
+	);
 };
 
 export default Article;
