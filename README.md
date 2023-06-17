@@ -11,7 +11,7 @@ Dans cet énoncé tu trouvra:
 *   Événements
 *   Gestion d'état
 
-### Consignes
+## Consignes
 
 Pour cet exercice, tu vas devoir cloner le dépôt dont le lien s'affiche ci-dessous:
 
@@ -39,7 +39,7 @@ Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il n'
 
 Ta mission désormais va être de réaliser la page suivante:
 
-![Hidden article](assets/ex1/ex1_hidden_article.png)
+![Hidden article](docs/ex1_hidden_article.png)
 
 Tu peux y apercevoir un titre et un bouton bleu.
 
@@ -49,7 +49,7 @@ Tu peux y apercevoir un titre et un bouton bleu.
 
 La seconde étape va être de permettre à l'utilisateur de faire apparaître un article lors du clic sur le bouton _"Show article"_ comme ceci:
 
-![Shown article](assets/ex1/ex1_shown_article.png)
+![Shown article](docs/ex1_shown_article.png)
 
 Remarque au passage que le bouton _"Show article"_ s'appelle désormais _"Hide article"_ et que sa couleur a changé.
 
