@@ -1,4 +1,4 @@
-# ⚛️ React Master - Mini blog: Gérer l'état d'un composant (Exercice)
+# ⚛️ React Master - Mini blog: Découverte des props (Exercice)
 
 > Dans cet énoncé tu trouvra:
 >
@@ -38,7 +38,7 @@ cd react-master-mini-blog
 Accède à la branche de l'exercice en exécutant la commande:
 
 ```bash
-git switch ex01/exercise
+git switch ex02/exercise
 ```
 
 Puis installes les dépendances avec la commande:
@@ -47,43 +47,41 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il n'y a qu'une page branche.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il n'y a que le titre "Mini blog" qui apparaît.
 
-Ta mission désormais va être de réaliser la page suivante:
+Cependant, dans le fichier `App.jsx`, tu peux remarquer qu'il y a plus qu'un simple titre. Il y a la même logique qu'auparavant mais avec quelques modifications...
 
-![Hidden article](docs/ex1_hidden_article.png)
+Le bouton n'est plus un simple élément HTML `button`, c'est un composant qui a été importé en haut du fichier. Idem pour le composant `Article`. Tu vois que si l'on souhaite utiliser un composant dans du **JSX**, on l'intègre sous la forme d'une balise HTML (par exemple: `<Button>Click here!</Button>`).
 
-Tu peux y apercevoir un titre et un bouton bleu.
+Tu peux retrouver les fichiers de ces composants dans le dossier `components/` qui se trouve dans `src/`.
 
-> ℹ️ **Information**
->
-> Le CSS t'es déjà donné. Regarde le fichier `index.css` dans le dossier `src/`, tu y trouvera tout ce dont tu as besoin.
+Ta mission va être de faire fonctionner ces composants pour que la page retrouve le même état qu'à la fin de l'exercice précédent.
 
-La seconde étape va être de permettre à l'utilisateur de faire apparaître un article lors du clic sur le bouton _"Show article"_ comme ceci:
+Pour réaliser cette mission, tu as besoin de te renseigner davantage sur les composants et notamment sur ce que l'on appelle les `props`.
 
-![Shown article](docs/ex1_shown_article.png)
+**Quelques informations sur les `props`:**
 
-Remarque au passage que le bouton _"Show article"_ s'appelle désormais _"Hide article"_ et que sa couleur a changé.
+Dans le fichier `App.jsx`, tu peux voir qu'on a ajouté quelques attributs particuliers au composant `Button`.
 
-Lorsque l'utilisateur clique à nouveau sur le bouton, l'article doit disparaître de la page et le bouton doit récupérer son état initial.
+`onClick`: tu le connais déjà, il faut maintenant que tu apprennes à le gérer depuis un composant.
+
+`variant`: celui-là tu ne le connais pas. C'est normal, c'est une propriété inventée de toute pièce. C'est à nous de gérer la logique de cette propriété. Cette propriété doit permettre à la développeuse ou au développeur qui utilise ce composant de choisir une couleur parmis celles prédéfinies dans le fichier `index.css`, à savoir `primary`, `danger`, `success` ou `warning`.
+
+Voici le lien vers la page de la documentation de **React** qui parle des `props`: <https://react.dev/learn/passing-props-to-a-component>
 
 <details>
  <summary>💡 <b>Indice</b></summary>
 
- > Pour pouvoir mettre à jour la vue suite au clic de l'utilisateur, tu as besoin de te renseigner sur le hook `useState`.
+ > Pour pouvoir ajouter des enfants HTML à un composant, **React** met à disposition une `props` un peu particulière qui s'appelle `children`.
  >
- > Tu n'as pas besoin de savoir exactement ce qu'est un hook à ce stade. Pars seulement du principe qu'il s'agit d'une simple fonction.
- >
- > Tu vas également avoir besoin de comprendre ce qu'est le `state` d'un composant et pourquoi il est nécessaire.
- >
- > Voici le lien vers la documentation de React qui explique le rôle du `state`: <https://react.dev/learn/state-a-components-memory>
- >
- > Voici le lien vers la page de la documentation de React qui parle de `useState`: <https://react.dev/reference/react/useState>
+ > Voici le lien de la documentation qui peut t'aider à ce sujet: <https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children>
 
 </details>
 
+Bon courage ! 💪
+
 ## Correction
 
-Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex01/correction#correction>
+Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex02/correction#correction>
 
 Ou suivre la correction en vidéo ici: _Bientôt disponible_
