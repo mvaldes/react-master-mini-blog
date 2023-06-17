@@ -1,4 +1,4 @@
-const variants = [ 'primary', 'danger', 'warning', 'success' ];
+const variants = [ 'primary', 'danger', 'warning', 'success', 'light' ];
 
 const Button = ({ variant = 'primary', children, ...rest }) => {
 
