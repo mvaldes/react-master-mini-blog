@@ -13,9 +13,8 @@
 
 ## Notions de l'exercice
 
-*   Affichage conditionnel
-*   Événements
-*   Gestion d'état
+*   Division de l'interface en composants
+*   Les `props`
 
 ## Consignes
 
