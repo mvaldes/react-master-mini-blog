@@ -82,6 +82,8 @@ Lorsque l'utilisateur clique à nouveau sur le bouton, l'article doit disparaît
 
 </details>
 
+Bon courage ! 💪
+
 ## Correction
 
 La première chose à faire ici c'est de remplir la page blanche avec le contenu demandé.
