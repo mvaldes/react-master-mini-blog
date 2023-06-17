@@ -20,13 +20,19 @@ Pour cet exercice, tu vas devoir cloner le dépôt dont le lien s'affiche ci-des
 Tu peux taper la commande suivante dans ton terminal:
 
 ```bash
-git clone <repository_url>
+git clone git@github.com:Atomic-React/react-master-mini-blog.git
 ```
 
 Ensuite, rends toi dans le dossier avec la commande suivante:
 
 ```bash
-cd <directory>
+cd react-master-mini-blog
+```
+
+Accède à la branche de l'exercice en exécutant la commande:
+
+```bash
+git switch ex/01
 ```
 
 Puis installes les dépendances avec la commande:
