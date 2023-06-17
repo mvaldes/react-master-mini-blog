@@ -82,6 +82,8 @@ Lorsque l'utilisateur clique à nouveau sur le bouton, l'article doit disparaît
 
 </details>
 
+Bon courage ! 💪
+
 ## Correction
 
 Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex01/correction#correction>
