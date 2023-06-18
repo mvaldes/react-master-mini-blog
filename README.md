@@ -51,6 +51,8 @@ Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera que la p
 
 Dans cet exercice, tu vas devoir créer et intégrer des composants à partir de zéro.
 
+**Penses à typer les `props` de tes composants.
+
 Tu dois réaliser, en dessous des éléments existants, un système d'onglets (_"tabs"_ en anglais) permettant d'afficher différents articles:
 
 ![Tabs](docs/ex3_tabs.png)
@@ -60,6 +62,7 @@ Utilise ce tableau pour le titre des onglets et le contenu des articles:
 ```jsx
 const tabs = [
 	{
+		id: 1,
 		title: 'Atomic React',
 		content: <Article title="Atomic React">
 			<p>
@@ -68,6 +71,7 @@ const tabs = [
 		</Article>,
 	},
 	{
+		id: 2,
 		title: 'Components',
 		content: <Article title="Components">
 			<p>
@@ -76,6 +80,7 @@ const tabs = [
 		</Article>,
 	},
 	{
+		id: 3,
 		title: 'Hooks',
 		content: <Article title="Hooks">
 			<p>
@@ -95,6 +100,14 @@ L'article qui doit être affiché par défaut, c'est à dire au chargement de la
 Le numéro de l'article affiché par défaut doit être personnalisable. C'est à dire qu'en tant que développeur, si j'utilises ton composants d'onglets, je dois être capable via une `props` de choisir le numéro de l'article que je souhaite voir s'afficher par défaut.
 
 Renseignes-toi sur les états dérivés (_"derived state"_ en anglais), cela peut t'être utile pour cet exercice.
+
+Penses aux cas particuliers:
+
+-   Que se passe-t-il si on ne défini pas de numéro d'article à afficher par défaut ?
+-   Que se passe-t-il si on ne défini pas de contenu à afficher pour les articles ?
+-   Que se passe-t-il si le tableau `tabs` fourni plus haut est vide ?
+
+À toi de repérer ces différents cas et de les traiter de la façon dont il semble bon de le faire.
 
 Bon courage ! 💪
 
