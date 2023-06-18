@@ -97,3 +97,9 @@ Le numéro de l'article affiché par défaut doit être personnalisable. C'est �
 Renseignes-toi sur les états dérivés (_"derived state"_ en anglais), cela peut t'être utile pour cet exercice.
 
 Bon courage ! 💪
+
+## Correction
+
+Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex03/correction#correction>
+
+Ou suivre la correction en vidéo ici: _Bientôt disponible_
