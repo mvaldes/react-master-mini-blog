@@ -451,3 +451,59 @@ Ici, les deux propriétés sont optionnelles.
 ```
 
 L'`id` et le `title` sont requis mais pas `content`.
+
+<!-- TODO => Montrer les rerendus si on avait géré le state dans App -->
+
+Un dernier mot sur le `state`.
+
+Pourquoi le gérer dans un composant `Tabs` et pas dans le composant `App` ?
+
+Tout d'abord, si nous avions une application bien plus complexe, gérer tous les états dans `App` rendrait notre application terriblement difficile à maintenir.
+
+Ensuite, elle ne serait pas du tout optimisée.
+
+Ajoute ce `console.log` dans `Tabs`:
+
+```jsx
+const Tabs = ({ defaultActiveTab, tabs }) => {
+
+	// ...
+
+	console.log('RENDER TABS');
+
+	return (
+		// ...
+	);
+};
+```
+
+Puis clique sur le bouton `Show/Hide article` que nous avions développé lors du premier exercice.
+
+Tu verra dans ta console que chaque fois que tu cliques sur ce bouton, le composant `Tabs` est réexécuté. On dit qu'il est re-rendu.
+
+Du fait qu'il y a une mise à jour du `state` dans `App`, **React** réexécute le composant pour pouvoir le mettre à jour dans l'interface.
+
+Cette réexécution, ce re-rendu du composant `App` entraine le re-rendu de tous ses composants enfants.
+
+Maintenant mets le même `console.log` dans `App`:
+
+```jsx
+const App = () => {
+
+	// ...
+
+	console.log('RENDER APP');
+
+  return (
+	// ...
+  );
+};
+```
+
+Et clique sur les boutons des onglets.
+
+Tu verra dans la console que seul le `console.log` de `RENDER TABS` apparaît. `RENDER APP` n'apparaît pas car `App` n'est pas re-rendu. Cela ne concerne que `Tabs` et ses enfants.
+
+Ce fonctionnement est vraiment très important à connaître et à comprendre pour pouvoir créer de bonnes applications optimisées avec **React**.
+
+Il est très important à connaître et à comprendre pour pouvoir faire un découpage optimal de l'application en composants et savoir placer et gérer le `state` correctement.
