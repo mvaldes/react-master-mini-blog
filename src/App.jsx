@@ -5,6 +5,7 @@ import Tabs from './components/Tabs';
 
 const tabs = [
 	{
+		id: 1,
 		title: 'Atomic React',
 		content: <Article title="Atomic React">
 			<p>
@@ -13,6 +14,7 @@ const tabs = [
 		</Article>,
 	},
 	{
+		id: 2,
 		title: 'Components',
 		content: <Article title="Components">
 			<p>
@@ -21,6 +23,7 @@ const tabs = [
 		</Article>,
 	},
 	{
+		id: 3,
 		title: 'Hooks',
 		content: <Article title="Hooks">
 			<p>
@@ -55,9 +58,7 @@ const App = () => {
 				</p>
 			</Article>
 		}
-		{
-			<Tabs defaultActiveTab={ 1 } tabs={ tabs } />
-		}
+		<Tabs defaultActiveTab={ 2 } tabs={ tabs } />
 	</>
   );
 };
