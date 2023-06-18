@@ -13,13 +13,13 @@ const getTabContent = (tabs = [], activeTabId = 0) => {
 	return foundTabContent || 'No content.';
 }
 
-const Tabs = ({ defaultActiveTab, tabs }) => {
+const Tabs = ({ defaultActiveTabId, tabs }) => {
 
-	const [ activeTab, setActiveTab ] = useState(defaultActiveTab);
-	const [ currentTabContent, setCurrentTabContent ] = useState(getTabContent(tabs, defaultActiveTab));
+	const [ activeTabId, setActiveTabId ] = useState(defaultActiveTabId);
+	const [ currentTabContent, setCurrentTabContent ] = useState(getTabContent(tabs, defaultActiveTabId));
 
 	const handleChangeTab = (tabId) => () => {
-		setActiveTab(tabId);
+		setActiveTabId(tabId);
 		setCurrentTabContent(getTabContent(tabs, tabId));
 	};
 
@@ -27,10 +27,10 @@ const Tabs = ({ defaultActiveTab, tabs }) => {
 		<div className="tabs-container">
 			<div className="tabs-buttons-container">
 				{
-					tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTab ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
+					tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTabId ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
 				}
 			</div>
-			{ tabs.map(({ id }) => id === activeTab ? <Fragment key={ id }>{ currentTabContent }</Fragment> : null) }
+			{ tabs.map(({ id }) => id === activeTabId ? <Fragment key={ id }>{ currentTabContent }</Fragment> : null) }
 		</div>
 	);
 };
@@ -38,7 +38,7 @@ const Tabs = ({ defaultActiveTab, tabs }) => {
 export default Tabs;
 
 Tabs.propTypes = {
-	defaultActiveTab: number,
+	defaultActiveTabId: number,
 	tabs: arrayOf(shape({
 		id: number.isRequired,
 		title: string.isRequired,
@@ -47,6 +47,6 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
-	defaultActiveTab: 0,
+	defaultActiveTabId: 0,
 	tabs: [],
 };

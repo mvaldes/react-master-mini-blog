@@ -52,7 +52,7 @@ const App = () => {
 		</Button>
 		{
 			areArticlesDisplayed &&
-			<Tabs defaultActiveTab={ 2 } tabs={ tabs } />
+			<Tabs defaultActiveTabId={ 2 } tabs={ tabs } />
 		}
 	</>
   );
