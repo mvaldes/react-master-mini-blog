@@ -13,7 +13,7 @@ const getInitialTabContent = (tabs = [], activeTabId = 0) => {
 	return foundTabContent || tabs[0].content;
 }
 
-const Tabs = ({ defaultActiveTab = 0, tabs = [] }) => {
+const Tabs = ({ defaultActiveTab, tabs }) => {
 
 	const [ activeTab, setActiveTab ] = useState(defaultActiveTab);
 	const [ currentTabContent, setCurrentTabContent ] = useState(getInitialTabContent(tabs, defaultActiveTab));
