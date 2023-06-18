@@ -1,13 +1,9 @@
-const variants = [ 'primary', 'danger', 'warning', 'success' ];
+import { node, oneOf } from 'prop-types';
 
-const Button = ({ variant = 'primary', children, ...rest }) => {
-
-	if (!variants.includes(variant)) {
-		throw new Error(`"${variant}" is not a valid value of the property "variant". It should be one of these: ${ variants.join(', ')}`);
-	}
+const Button = ({ variant, children, ...htmlButtonProps }) => {
 
 	return (
-		<button className={`btn btn--${ variant }`} { ...rest }>
+		<button className={`btn btn--${ variant }`} { ...htmlButtonProps }>
 			{ children }
 		</button>
 	);
@@ -15,3 +11,11 @@ const Button = ({ variant = 'primary', children, ...rest }) => {
 
 export default Button;
 
+Button.propTypes = {
+	variant: oneOf([ 'primary', 'danger', 'warning', 'success' ]),
+	children: node.isRequired,
+}
+
+Button.defaultProps = {
+	variant: 'primary',
+}

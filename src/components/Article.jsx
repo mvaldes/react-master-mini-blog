@@ -1,3 +1,5 @@
+import { string, node } from 'prop-types';
+
 const Article = ({ title, children }) => {
 
 	return (
@@ -9,3 +11,8 @@ const Article = ({ title, children }) => {
 };
 
 export default Article;
+
+Article.propTypes = {
+	title: string.isRequired,
+	children: node.isRequired,
+};
