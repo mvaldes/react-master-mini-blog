@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Button from './components/Button';
 import Article from './components/Article';
 import Tabs from './components/Tabs';
 
@@ -32,11 +34,26 @@ const tabs = [
 ];
 
 const App = () => {
+  const [ areArticlesDisplayed, setAreArticlesDisplayed ] = useState(false);
+
+  const handleToggleArticles = () => {
+	setAreArticlesDisplayed(!areArticlesDisplayed);
+  };
 
   return (
 	<>
 		<h1>Mini Blog</h1>
-		<Tabs defaultActiveTab={ 2 } tabs={ tabs } />
+		<Button
+			variant={ areArticlesDisplayed ? 'danger' : 'primary' }
+			type="button"
+			onClick={ handleToggleArticles }
+		>
+			{ areArticlesDisplayed ? 'Hide' : 'Show' } articles
+		</Button>
+		{
+			areArticlesDisplayed &&
+			<Tabs defaultActiveTab={ 2 } tabs={ tabs } />
+		}
 	</>
   );
 };

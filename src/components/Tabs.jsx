@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { arrayOf, node, number, shape, string } from 'prop-types';
 import Button from './Button';
 
@@ -30,7 +30,7 @@ const Tabs = ({ defaultActiveTab, tabs }) => {
 					tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTab ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
 				}
 			</div>
-			{ currentTabContent }
+			{ tabs.map(({ id }) => id === activeTab ? <Fragment key={ id }>{ currentTabContent }</Fragment> : null) }
 		</div>
 	);
 };
