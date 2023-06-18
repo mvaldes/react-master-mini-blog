@@ -12,7 +12,7 @@ const Button = ({ variant, children, ...htmlButtonProps }) => {
 export default Button;
 
 Button.propTypes = {
-	variant: oneOf([ 'primary', 'danger', 'warning', 'success' ]),
+	variant: oneOf([ 'primary', 'danger', 'warning', 'success', 'light' ]),
 	children: node.isRequired,
 }
 
