@@ -1,4 +1,4 @@
-# ⚛️ React Master - Mini blog: État dérivé (Correction)
+# ⚛️ React Master - Mini blog: État dérivé (Exercice)
 
 > Dans cet énoncé tu trouvra:
 >
@@ -17,6 +17,7 @@
 -   Division de l'interface en composants
 -   Les `props`
 -   Le `state`
+-   `PropTypes`
 -   État dérivé
 
 ## Consignes
@@ -51,7 +52,7 @@ Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera que la p
 
 Dans cet exercice, tu vas devoir créer et intégrer des composants à partir de zéro.
 
-**Penses à typer les `props` de tes composants.
+**Penses à typer les `props` de tes composants avec `PropTypes`.**
 
 Tu dois réaliser, en dessous des éléments existants, un système d'onglets (_"tabs"_ en anglais) permettant d'afficher différents articles:
 
