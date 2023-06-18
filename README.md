@@ -437,3 +437,17 @@ Tabs.defaultProps = {
 	tabs: [],
 };
 ```
+
+Ici, les deux propriétés sont optionnelles.
+
+`tabs` est de type "tableau" de "quelque chose". Ce quelque chose est un objet de la forme suivante:
+
+```jsx
+{
+	id: number.isRequired,
+	title: string.isRequired,
+	content: node
+}
+```
+
+L'`id` et le `title` sont requis mais pas `content`.
