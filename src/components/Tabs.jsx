@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TabButton from './TabButton';
+import { arrayOf, node, number, shape, string } from 'prop-types';
 
 const getInitialTabContent = (tabs = [], activeTabId = 0) => {
 	if (tabs.length === 0) {
@@ -36,3 +37,17 @@ const Tabs = ({ defaultActiveTab = 0, tabs = [] }) => {
 };
 
 export default Tabs;
+
+Tabs.propTypes = {
+	defaultActiveTab: number,
+	tabs: arrayOf(shape({
+		id: number.isRequired,
+		title: string.isRequired,
+		content: node
+	})),
+};
+
+Tabs.defaultProps = {
+	defaultActiveTab: 0,
+	tabs: [],
+};
