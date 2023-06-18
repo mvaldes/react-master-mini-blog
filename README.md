@@ -41,7 +41,7 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera que le contenu du premier exercice a été supprimé. Il n'y a plus le bouton permettant d'afficher et masquer l'article. Nous n'aurons plus besoin de ça ici.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il y a eu une légère modification: il n'y a plus l'article qui était affiché ou masqué grâce au bouton. Désormais, le bouton affiche et masque l'ensemble des onglets et des articles.
 
 Dans cet exercice, tu vas devoir intégrer une nouvelle fonctionnalité: afficher une horloge indiquant combien de temps l'utilisateur passe à lire un article dans les onglets.
 
@@ -49,7 +49,7 @@ L'idée, c'est qu'au moment où l'utilisateur charge un article, un chronomètre
 
 Si l'utilisateur change d'article, un nouveau chronomètre démarre.
 
-Ce chronomètre devra être affiché juste en dessus du titre de l'article.
+Ce chronomètre devra être affiché juste en dessus du titre de l'article au format _"HH:mm:ss"_
 
 Pour réaliser cet exercice, tu aura besoin de te familiariser avec ce que l'on appelle le "cycle de vie" (_"life cycle"_ en anglais) des composants.
 
