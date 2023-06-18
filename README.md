@@ -8,9 +8,9 @@
 ## Sommaire
 
 <!-- no toc -->
--   [Sommaire](#sommaire)
 -   [Notions de l'exercice](#notions-de-lexercice)
 -   [Consignes](#consignes)
+-   [Correction](#correction)
 
 ## Notions de l'exercice
 
