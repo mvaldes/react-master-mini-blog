@@ -77,3 +77,7 @@ Voici le lien vers la documentation de **React** qui parle de `useEffect`: <http
 Bon courage ! 💪
 
 ## Correction
+
+Tu peux consulter la correction écrite ici: <https://github.com/Atomic-React/react-master-mini-blog/tree/ex04/correction#correction>
+
+Ou suivre la correction en vidéo ici: _Bientôt disponible_
