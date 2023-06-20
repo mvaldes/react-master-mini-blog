@@ -1,25 +1,23 @@
 import { useEffect, useState } from 'react';
-import { convertSecondsToHMS } from '../utils/time.util';
 
 let intervalId;
 
-const Timer = () => {
+const useTimer = (interval = 1000) => {
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
 		intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
-		}, 1000);
+		}, interval);
 
 		return () => {
 			clearInterval(intervalId);
 		}
 	}, []);
 
-	return (
-		<p>{ convertSecondsToHMS(elaspedTime) }</p>
-	)
+	return elaspedTime;
+
 };
 
-export default Timer;
+export default useTimer;
