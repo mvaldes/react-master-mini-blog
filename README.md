@@ -47,6 +47,8 @@ npm install
 
 Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il y a eu une légère modification: il n'y a plus l'article qui était affiché ou masqué grâce au bouton. Désormais, le bouton affiche et masque l'ensemble des onglets et des articles.
 
+Et si tu te rends sur le fichier `Tabs.jsx`, tu verra que l'affichage du contenu dans le JSX a été remplacé par un `tabs.map`. Cette modification a été faite pour les besoins de l'exercice. Tu n'as pas besoin de t'en préoccuper ni d'y toucher.
+
 Dans cet exercice, tu vas devoir intégrer une nouvelle fonctionnalité: afficher une horloge indiquant combien de temps l'utilisateur passe à lire un article dans les onglets.
 
 L'idée, c'est qu'au moment où l'utilisateur charge un article, un chronomètre démarre et affiche en temps réelle la durée de consultation de l'article.
