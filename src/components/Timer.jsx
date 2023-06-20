@@ -21,8 +21,9 @@ const Timer = () => {
 
 	useEffect(() => {
 		intervalId = setInterval(() => {
-			setElapsedTime(prevElapsedTime => prevElapsedTime + 1);
+			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);
+
 		return () => {
 			clearInterval(intervalId);
 		}
