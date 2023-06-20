@@ -1,5 +1,9 @@
 # ⚛️ React Master - Mini blog: Découverte du cycle de vie (Correction)
 
+Dans cet énoncé tu trouvra:
+
+1 💡 indice
+
 ## Sommaire
 
 <!-- no toc -->
@@ -58,6 +62,15 @@ Pour réaliser cet exercice, tu aura besoin de te familiariser avec ce que l'on 
 Voici le lien vers la documentation de **React** qui parle du cycle de vie des composants: <https://react.dev/learn/lifecycle-of-reactive-effects#the-lifecycle-of-an-effect>
 
 Voici le lien vers la documentation de **React** qui parle de `useEffect`: <https://react.dev/reference/react/useEffect>
+
+<details>
+ <summary>💡 <b>Indice</b></summary>
+
+ > Si tu te rends compte que l'état de ton horloge ne se met pas à jour correctement, retourne sur la documentation du `useState`.
+ >
+ > Ceci peut t'aider: <https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state>
+
+</details>
 
 Bon courage ! 💪
 
