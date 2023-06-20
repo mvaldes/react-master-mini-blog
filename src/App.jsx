@@ -2,8 +2,6 @@ import { useState } from 'react';
 import Button from './components/Button';
 import Article from './components/Article';
 import Tabs from './components/Tabs';
-import useTimer from './hooks/useTimer';
-import { convertSecondsToHMS } from './utils/time.util';
 
 const tabs = [
 	{
@@ -38,8 +36,6 @@ const tabs = [
 const App = () => {
   const [ areArticlesDisplayed, setAreArticlesDisplayed ] = useState(false);
 
-  const elaspedTime = useTimer();
-
   const handleToggleArticles = () => {
 	setAreArticlesDisplayed(!areArticlesDisplayed);
   };
@@ -47,7 +43,7 @@ const App = () => {
   return (
 	<>
 		<h1>Mini Blog</h1>
-		<p style={{ fontWeight: 'bold', fontSize: 20 }}>You spent { convertSecondsToHMS(elaspedTime) } on the blog.</p>
+		<p style={{ fontWeight: 'bold', fontSize: 20 }}>You spent { "00:00:00" } on the blog.</p>
 		<Button
 			variant={ areArticlesDisplayed ? 'danger' : 'primary' }
 			type="button"
