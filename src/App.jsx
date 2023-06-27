@@ -38,7 +38,7 @@ const tabs = [
 const App = () => {
   const [ areArticlesDisplayed, setAreArticlesDisplayed ] = useState(false);
 
-  const elaspedTime = useTimer(300);
+  const elaspedTime = useTimer();
 
   const handleToggleArticles = () => {
 	setAreArticlesDisplayed(!areArticlesDisplayed);
