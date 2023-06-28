@@ -1,26 +1,13 @@
-import { Fragment, useState } from 'react';
-import { arrayOf, node, number, shape, string } from 'prop-types';
+import { number, arrayOf, shape, string, node } from 'prop-types';
 import Button from './Button';
-
-const getTabContent = (tabs = [], activeTabId = 0) => {
-	if (tabs.length === 0) {
-		return 'No content.';
-	}
-	if (!activeTabId) {
-		return tabs[0].content;
-	}
-	const foundTabContent = tabs.find(tab => tab.id === activeTabId)?.content;
-	return foundTabContent || 'No content.';
-}
+import { useState } from 'react';
 
 const Tabs = ({ defaultActiveTabId, tabs }) => {
 
-	const [ activeTabId, setActiveTabId ] = useState(defaultActiveTabId);
-	const [ currentTabContent, setCurrentTabContent ] = useState(getTabContent(tabs, defaultActiveTabId));
+	const [ activeTabId, setActiveTabId ] = useState(defaultActiveTabId); // État dérivé (derived state)
 
 	const handleChangeTab = (tabId) => () => {
 		setActiveTabId(tabId);
-		setCurrentTabContent(getTabContent(tabs, tabId));
 	};
 
 	return (
@@ -30,7 +17,9 @@ const Tabs = ({ defaultActiveTabId, tabs }) => {
 					tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTabId ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
 				}
 			</div>
-			{ tabs.map(({ id }) => id === activeTabId ? <Fragment key={ id }>{ currentTabContent }</Fragment> : null) }
+			{ 
+				tabs.find(tab => tab.id === activeTabId)?.content || 'No content'
+			}
 		</div>
 	);
 };
@@ -42,11 +31,11 @@ Tabs.propTypes = {
 	tabs: arrayOf(shape({
 		id: number.isRequired,
 		title: string.isRequired,
-		content: node
-	})),
+		content: node.isRequired,
+	})).isRequired,
 };
 
 Tabs.defaultProps = {
-	defaultActiveTabId: 0,
-	tabs: [],
+	defaultActiveTabId: 1,
 };
+
