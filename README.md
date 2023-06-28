@@ -1,10 +1,5 @@
 # ⚛️ React Master - Mini blog: État dérivé (Exercice)
 
-> Dans cet énoncé tu trouvra:
->
-> 1 ℹ️ information<br>
-> 1 💡 indice
-
 ## Sommaire
 
 <!-- no toc -->
@@ -48,7 +43,7 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera que la page est au même état qu'à la fin de la correction du dernier exercice.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu verra que la page est au même état qu'à la fin de la correction du dernier exercice.
 
 Dans cet exercice, tu vas devoir créer et intégrer des composants à partir de zéro.
 
