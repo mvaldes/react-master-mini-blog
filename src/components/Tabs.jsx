@@ -1,6 +1,6 @@
 import { number, arrayOf, shape, string, node } from 'prop-types';
 import Button from './Button';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 const Tabs = ({ defaultActiveTabId, tabs }) => {
 
@@ -18,8 +18,9 @@ const Tabs = ({ defaultActiveTabId, tabs }) => {
 				}
 			</div>
 			{ 
-				tabs.find(tab => tab.id === activeTabId)?.content || 'No content'
+				tabs.map(({ id, content }) => id === activeTabId ? <Fragment key={ id }>{ content }</Fragment> : 'No content.')
 			}
+	
 		</div>
 	);
 };
@@ -38,4 +39,3 @@ Tabs.propTypes = {
 Tabs.defaultProps = {
 	defaultActiveTabId: 1,
 };
-
