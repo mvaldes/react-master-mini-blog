@@ -39,7 +39,7 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il n'y a que le titre "Mini blog" qui apparaît.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu verra qu'il n'y a que le titre "Mini blog" qui apparaît.
 
 Cependant, dans le fichier `App.jsx`, tu peux remarquer qu'il y a plus qu'un simple titre. Il y a la même logique qu'auparavant mais avec quelques modifications...
 
