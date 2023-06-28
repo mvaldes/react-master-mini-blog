@@ -1,10 +1,5 @@
 # ⚛️ React Master - Mini blog: État dérivé (Exercice)
 
-> Dans cet énoncé tu trouvra:
->
-> 1 ℹ️ information<br>
-> 1 💡 indice
-
 ## Sommaire
 
 <!-- no toc -->
@@ -303,105 +298,14 @@ Il ne nous reste plus qu'à gérer le système de changement de couleur sur les 
 
 À ce moment là tout fonctionne mais il reste quelque chose à gérer.
 
-Que se passe-t-il si on transmet un tableau `tabs` vide ? Ou alors si on n'indique pas d'onglet actif par défaut ?
+Que se passe-t-il si on transmet un tableau `tabs` vide ? Ou alors si on n'indique pas d'onglet actif par défaut ? Ou si on donne un `id` qui n'existe pas comme onglet à afficher par défaut ?
 
-Le composant va planter.
+Le composant va planter et on aura des erreurs dans la console.
 
-J'ai donc préparé une fonction qui va nous permettre d'initialiser le contenu à afficher d'après tous ces cas particuliers:
-
-```jsx
-// Ce fonction reçois tabs qui par défaut est vide, et activeTabId qui par défaut est égal à 0
-const getTabContent = (tabs = [], activeTabId = 0) => {
-	// Si le tableau tabs est vide
-	if (tabs.length === 0) {
-		// On retourne cette chaine de caractères
-		return 'No content.';
-	}
-
-	// Si artive tab est falsy
-	if (!activeTabId) {
-		// On retourne le contenu du premier article
-		return tabs[0].content;
-	}
-
-	// Sinon, on cherche le contenu de l'article demandé
-	const foundTabContent = tabs.find(tab => tab.id === activeTabId)?.content;
-	// Si le contenu existe, on le retourne, sinon, on retourne 'No content.'
-	return foundTabContent || 'No content.';
-}
-```
-
-Nous pouvons donc utiliser cette fonction pour initialiser le contenu à afficher par défaut, que l'on peu placer dans le `state`:
+Il faut donc modifier l'affichage du contenu des `tabs` pour gérer le cas où le contenu n'est pas disponible:
 
 ```jsx
-const [ activeTab, setActiveTab ] = useState(defaultActiveTab);
-const [ currentTabContent, setCurrentTabContent ] = useState(getInitialTabContent(tabs, defaultActiveTab));
-```
-
-Il faut donc mettre à jour le JSX en conséquences:
-
-```jsx
-return (
-	<div className="tabs-container">
-		<div className="tabs-buttons-container">
-			{
-				tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTab ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
-			}
-		</div>
-		{ currentTabContent }
-	</div>
-);
-```
-
-Et il faut également mettre à jour la fonction `handleChangeTab` pour qu'au moment du clique sur un bouton, le contenu dans le `state` soit mis à jour:
-
-```jsx
-const handleChangeTab = (tabId) => () => {
-	setActiveTab(tabId);
-	setCurrentTabContent(getTabContent(tabs, tabId));
-};
-```
-
-Ce qui nous donne finalement ce fichier:
-
-```jsx
-import { useState } from 'react';
-import Button from './Button';
-
-const getTabContent = (tabs = [], activeTabId = 0) => {
-	if (tabs.length === 0) {
-		return 'No content.';
-	}
-	if (!activeTabId) {
-		return tabs[0].content;
-	}
-	const foundTabContent = tabs.find(tab => tab.id === activeTabId)?.content;
-	return foundTabContent || 'No content.';
-}
-
-const Tabs = ({ defaultActiveTab, tabs }) => {
-
-	const [ activeTab, setActiveTab ] = useState(defaultActiveTab);
-	const [ currentTabContent, setCurrentTabContent ] = useState(getTabContent(tabs, defaultActiveTab));
-
-	const handleChangeTab = (tabId) => () => {
-		setActiveTab(tabId);
-		setCurrentTabContent(getTabContent(tabs, tabId));
-	};
-
-	return (
-		<div className="tabs-container">
-			<div className="tabs-buttons-container">
-				{
-					tabs.map(({ title, id }) => <Button key={ id } variant={ id === activeTab ? 'primary' : 'light' } onClick={ handleChangeTab(id) }>{ title }</Button>)
-				}
-			</div>
-			{ currentTabContent }
-		</div>
-	);
-};
-
-export default Tabs;
+tabs.find(tab => tab.id === activeTabId)?.content || 'No content'
 ```
 
 Dans l'énoncé on nous demandait de nous occuper des `PropTypes`, ajoutons les:
@@ -410,11 +314,6 @@ Dans l'énoncé on nous demandait de nous occuper des `PropTypes`, ajoutons les:
 import { useState } from 'react';
 import { arrayOf, node, number, shape, string } from 'prop-types';
 import Button from './Button';
-
-const getTabContent = (tabs = [], activeTabId = 0) => {
-
-	// ...
-}
 
 const Tabs = ({ defaultActiveTab, tabs }) => {
 
@@ -428,17 +327,14 @@ Tabs.propTypes = {
 	tabs: arrayOf(shape({
 		id: number.isRequired,
 		title: string.isRequired,
-		content: node
-	})),
+		content: node.isRequired
+	})).isRequired, // Les tabs sont requises
 };
 
 Tabs.defaultProps = {
 	defaultActiveTab: 0,
-	tabs: [],
 };
 ```
-
-Ici, les deux propriétés sont optionnelles.
 
 `tabs` est de type "tableau" de "quelque chose". Ce quelque chose est un objet de la forme suivante:
 
@@ -446,13 +342,9 @@ Ici, les deux propriétés sont optionnelles.
 {
 	id: number.isRequired,
 	title: string.isRequired,
-	content: node
+	content: node.isRequired
 }
 ```
-
-L'`id` et le `title` sont requis mais pas `content`.
-
-<!-- TODO => Montrer les rerendus si on avait géré le state dans App -->
 
 Un dernier mot sur le `state`.
 
