@@ -1,9 +1,5 @@
 # ⚛️ React Master - Mini blog: Découverte du cycle de vie (Correction)
 
-Dans cet énoncé tu trouvra:
-
-1 💡 indice
-
 ## Sommaire
 
 <!-- no toc -->
@@ -45,7 +41,7 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il y a eu une légère modification: il n'y a plus l'article qui était affiché ou masqué grâce au bouton. Désormais, le bouton affiche et masque l'ensemble des onglets et des articles.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu verra qu'il y a eu une légère modification: il n'y a plus l'article qui était affiché ou masqué grâce au bouton. Désormais, le bouton affiche et masque l'ensemble des onglets et des articles.
 
 Et si tu te rends sur le fichier `Tabs.jsx`, tu verra que l'affichage du contenu dans le JSX a été remplacé par un `tabs.map`. Cette modification a été faite pour les besoins de l'exercice. Tu n'as pas besoin de t'en préoccuper ni d'y toucher.
 
