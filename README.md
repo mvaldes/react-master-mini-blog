@@ -342,10 +342,9 @@ useEffect(() => {
 
 Mais ce n'est pas suffisant ! Il faut indiquer au `clearInterval` quel processus arrêter. Car plusieurs `interval` pourraient être exécutés en simultané. Il faut donc lui indiquer lequel arrêter en lui passant l`id` de l'interval en cours en argument.
 
-Pour le récupérer, on peut placer `setInterval` dans une variable que l'on aura au préalable déclaré de façon globale dans le fichier. Cela donne ceci:
+Pour le récupérer, on peut placer `setInterval` dans une constante:
 
 ```jsx
-let intervalId; // Variable destinée à contenir l'id du processus de l'interval
 
 const Timer = () => {
 
@@ -353,7 +352,7 @@ const Timer = () => {
 
 	useEffect(() => {
 		// On enregistre l'id du processus de l'interval
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			console.log('INTERVAL');
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);

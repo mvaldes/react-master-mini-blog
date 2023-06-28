@@ -13,14 +13,12 @@ const convertSecondsToHMS = (timeInSeconds) => {
 	return `${hDisplay}:${mDisplay}:${sDisplay}`;
 };
 
-let intervalId;
-
 const Timer = () => {
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);
 
