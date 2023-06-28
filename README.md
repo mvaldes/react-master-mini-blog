@@ -1,10 +1,5 @@
 # ⚛️ React Master - Mini blog: Gérer l'état d'un composant (Exercice)
 
-> Dans cet énoncé tu trouvra:
->
-> 1 ℹ️ information<br>
-> 1 💡 indice
-
 ## Sommaire
 
 1.   [Notions](#notions-de-lexercice)
