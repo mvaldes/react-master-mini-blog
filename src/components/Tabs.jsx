@@ -18,7 +18,7 @@ const Tabs = ({ defaultActiveTabId, tabs }) => {
 				}
 			</div>
 			{ 
-				tabs.map(({ id, content }) => id === activeTabId ? <Fragment key={ id }>{ content }</Fragment> : null)
+				tabs.map(({ id, content }) => id === activeTabId ? <Fragment key={ id }>{ content || 'No content.' }</Fragment> : null)
 			}
 	
 		</div>
@@ -39,4 +39,3 @@ Tabs.propTypes = {
 Tabs.defaultProps = {
 	defaultActiveTabId: 1,
 };
-
