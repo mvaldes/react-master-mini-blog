@@ -40,7 +40,7 @@ Puis installes les dépendances avec la commande:
 npm install
 ```
 
-Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu vera qu'il n'y a qu'une page branche.
+Tu peux maintenant te rendre sur l'URL <http://localhost:5173>. Tu verra qu'il n'y a qu'une page branche.
 
 Ta mission désormais va être de réaliser la page suivante:
 
