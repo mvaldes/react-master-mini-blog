@@ -18,7 +18,7 @@ const Tabs = ({ defaultActiveTabId, tabs }) => {
 				}
 			</div>
 			{ 
-				tabs.map(({ id, content }) => id === activeTabId ? <Fragment key={ id }>{ content }</Fragment> : 'No content.')
+				tabs.map(({ id, content }) => id === activeTabId ? <Fragment key={ id }>{ content || 'No content.'  }</Fragment> : null)
 			}
 	
 		</div>
