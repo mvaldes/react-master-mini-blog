@@ -81,14 +81,12 @@ Nous pouvons ensuite récupérer la logique que nous avons déjà développée d
 ```JSX
 import { useEffect, useState } from 'react';
 
-let intervalId;
-
 const useTimer = () => {
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);
 
@@ -109,14 +107,12 @@ Ensuite, pour que `elaspedTime` soit accessible par le composant qui utilise `us
 ```JSX
 import { useEffect, useState } from 'react';
 
-let intervalId;
-
 const useTimer = () => {
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);
 
@@ -181,14 +177,12 @@ Rajoutons donc un argument `interval` dans la fonction de `useTimer` qui aura co
 ```jsx
 import { useEffect, useState } from 'react';
 
-let intervalId;
-
 const useTimer = (interval = 1000) => { // ICI
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, interval); // ICI
 
