@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import { convertSecondsToHMS } from '../utils/time.util';
 
-let intervalId;
-
 const Timer = () => {
 
 	const [ elaspedTime, setElapsedTime ] = useState(0);
 
 	useEffect(() => {
-		intervalId = setInterval(() => {
+		const intervalId = setInterval(() => {
 			setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
 		}, 1000);
 
