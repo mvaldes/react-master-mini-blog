@@ -1,7 +1,29 @@
 # ⚛️ React Master - Mini blog
 
-1.   [📝 Exercice n°1 - Gérer l'état d'un composant](https://github.com/Atomic-React/react-master-mini-blog/tree/ex01/exercise)
-2.   [📝 Exercice n°2 - Découverte des props](https://github.com/Atomic-React/react-master-mini-blog/tree/ex02/exercise)
-3.   [📝 Exercice n°3 - État dérivé](https://github.com/Atomic-React/react-master-mini-blog/tree/ex03/exercise)
-4.   [📝 Exercice n°4 - Découverte du cycle de vie](https://github.com/Atomic-React/react-master-mini-blog/tree/ex04/exercise)
-5.   [📝 Exercice n°5 - Créer un custom hook](https://github.com/Atomic-React/react-master-mini-blog/tree/ex05/exercise)
+Pour choisir un exercice, utilise la commande `git switch` suivit du nom de la branche de l'exercice. Par exemple:
+
+```bash
+git switch ex01/exercise
+```
+
+Lorsque tu as terminé l'exercice, pense à sauvegarder pour que Git te permette de changer d'exercice en tapant la commande:
+
+```bash
+git add .
+```
+
+puis la commande
+
+```bash
+git commit -m "Nom de la sauvegarde"
+```
+
+Tu peux remplacer `"Nom de la sauvegarde"` par ce que tu veux. À toi de nommer tes sauvegardes comme il te paît.
+
+Une fois la sauvegarde réalisée, tu pourra consulter la correction en utilisant la commande `git switch` suivit du nom de la branche de la correction. Par exemple:
+
+```bash
+git switch ex01/correction
+```
+
+Ou en te rendant sur [Atomic React](https://atomic-react.com) pour consulter la correction écrite ou la correction vidéo.
