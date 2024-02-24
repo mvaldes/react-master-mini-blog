@@ -1,5 +1,11 @@
 # ⚛️ React Master - Mini blog
 
+Clone le dépôt pour récupérer les exercices:
+
+```bash
+git clone git@github.com:Atomic-React/react-master-mini-blog.git
+```
+
 Pour choisir un exercice, utilise la commande `git switch` suivit du nom de la branche de l'exercice. Par exemple:
 
 ```bash
