@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const App = () => {
-	const [isArticle, setArticle] = useState(false);
+	const [isArticle, setIsArticle] = useState(false);
 
 	const handleClick = () => {
-		setArticle(!isArticle);
+		setIsArticle(!isArticle);
 	}
 
 	return (
